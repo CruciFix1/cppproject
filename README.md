@@ -1,2 +1,2 @@
 # cppproject
-My C++ Project
+My C++ Individual Project
