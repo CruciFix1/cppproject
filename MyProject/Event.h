@@ -1,19 +1,21 @@
+#include <string>
+using namespace std;
 #ifndef EVENT_H
 #define EVENT_H
 
 class Event
 {
 private:
-	char* name;
+	string name;
 	int date;
 	int time;
 
 public:
-	void setName(char* nume);
+	void setName(string nume);
 	void setDate(int data);
 	void setTime(int timp);
 
-	char* getName();
+	string getName();
 	int getDate();
 	int getTime();
 };
