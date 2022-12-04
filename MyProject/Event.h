@@ -11,6 +11,10 @@ private:
 	int time;
 
 public:
+
+	Event();
+	Event(string name, int date, int time);
+
 	void setName(string nume);
 	void setDate(int data);
 	void setTime(int timp);

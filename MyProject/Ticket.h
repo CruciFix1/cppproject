@@ -7,12 +7,16 @@ class Ticket
 {
 private:
 	static int nrofgentickets;
-	const char* uniqueID;
+	char* uniqueID;
 	const string zone;
-	const int row;
-	const int seat;
+	int row;
+	int seat;
 
 public:
+
+	Ticket();
+	Ticket(char* uniqueID, int row, int seat);
+
 	static void setNrofgentickets(int nrtichete);
 
 	const char* getUniqueID();
