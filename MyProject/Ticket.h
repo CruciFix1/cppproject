@@ -19,6 +19,7 @@ public:
 
 	static void setNrofgentickets(int nrtichete);
 
+	static int getNrofgentickets();
 	const char* getUniqueID();
 	const string getZone();
 	const int getRow();

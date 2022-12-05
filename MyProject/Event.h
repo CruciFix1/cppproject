@@ -7,21 +7,21 @@ class Event
 {
 private:
 	string name;
-	int date;
-	int time;
+	string date;
+	double time;
 
 public:
 
 	Event();
-	Event(string name, int date, int time);
+	Event(string name, string date, double time);
 
 	void setName(string nume);
-	void setDate(int data);
-	void setTime(int timp);
+	void setDate(string data);
+	void setTime(double timp);
 
 	string getName();
-	int getDate();
-	int getTime();
+	string getDate();
+	double getTime();
 };
 
 #endif 

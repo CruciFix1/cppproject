@@ -18,6 +18,10 @@ public:
 	Location();
 	Location(int nrofseats, int nrofrows, int seatsperrow, int* row, string zone);
 
+	Location(const Location& copy);
+	Location& operator=(const Location& copy);
+	~Location();
+
 	void setNrofseats(int numarscaune);
 	void setNrofrows(int numarranduri);
 	void setSeatsperrow(int scauneperrand);
