@@ -16,8 +16,15 @@ public:
 
 	Ticket();
 	Ticket(char* uniqueID, int row, int seat);
+	Ticket(const Ticket& copy);
+	~Ticket();
+
+	friend ostream& operator<<(ostream& out, Ticket a);
+	friend istream& operator>>(istream& in, Ticket& a);
 
 	static void setNrofgentickets(int nrtichete);
+	static void incrementTickets();
+
 
 	static int getNrofgentickets();
 	const char* getUniqueID();

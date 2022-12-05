@@ -22,6 +22,9 @@ public:
 	Location& operator=(const Location& copy);
 	~Location();
 
+	friend ostream& operator<<(ostream& out, Location a);
+	friend istream& operator>>(istream& in, Location& a);
+
 	void setNrofseats(int numarscaune);
 	void setNrofrows(int numarranduri);
 	void setSeatsperrow(int scauneperrand);
