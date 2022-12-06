@@ -16,7 +16,7 @@ private:
 public:
 
 	Ticket();
-	Ticket(char* uniqueID, int row, int seat);
+	Ticket(char* uniqueID, string zone, int row, int seat);
 
 
 	Ticket(const Ticket& copy);
