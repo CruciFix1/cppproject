@@ -18,6 +18,9 @@ public:
 	friend ostream& operator<<(ostream& out, Event a);
 	friend istream& operator>>(istream& in, Event& a);
 
+	bool operator>(Event compare);
+	bool operator<(Event compare);
+
 	void setName(string nume);
 	void setDate(string data);
 	void setTime(int timp);
