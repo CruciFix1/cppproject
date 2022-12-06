@@ -1,4 +1,6 @@
+#pragma once
 #include <string>
+#include "Location.h"
 using namespace std;
 #ifndef EVENT_H
 #define EVENT_H

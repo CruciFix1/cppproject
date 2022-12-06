@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #ifndef TICKET_H
 #define TICKET_H
