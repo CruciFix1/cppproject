@@ -8,23 +8,26 @@ class Event
 private:
 	string name;
 	string date;
-	double time;
+	int time;
 
 public:
 
 	Event();
-	Event(string name, string date, double time);
+	Event(string name, string date, int time);
 
 	friend ostream& operator<<(ostream& out, Event a);
 	friend istream& operator>>(istream& in, Event& a);
 
 	void setName(string nume);
 	void setDate(string data);
-	void setTime(double timp);
+	void setTime(int timp);
+
+	int timeAshours(int timp);
+	int numberOfLocations(Location a);
 
 	string getName();
 	string getDate();
-	double getTime();
+	int getTime();
 };
 
 #endif 

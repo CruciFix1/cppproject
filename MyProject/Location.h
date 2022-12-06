@@ -1,4 +1,5 @@
 #include <string>
+#include "Event.h"
 using namespace std;
 #ifndef LOCATION_H
 #define LOCATION_H
@@ -12,6 +13,7 @@ private:
 	int seatsperrow;
 	int* row;
 	string zone;
+	static int numberofLocations;
 
 public:
 
@@ -30,12 +32,17 @@ public:
 	void setSeatsperrow(int scauneperrand);
 	void setRow(int* rand);
 	void setZone(string zona);
+	static void setNrOfLocations(int numar);
+
+	bool checkAvailability();
+	void checkBelongs(Event check);
 
 	int getNrofseats();
 	int getNrofrows();
 	int getSeatsperrow();
 	int* getRow();
 	string getZone();
+	static int getNrOfLocations();
 
 };
 

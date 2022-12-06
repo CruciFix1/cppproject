@@ -30,6 +30,10 @@ public:
 	bool operator!();
 
 	static void setNrofgentickets(int nrtichete);
+	void setUniqueID(char* id);
+	void setRow(int rand);
+	void setSeat(int loc);
+
 	static void incrementTickets();
 	void neighbours(Ticket a);
 
