@@ -1,3 +1,4 @@
+#include<iostream>
 #include "Ticket.h"
 #include<string>
 
@@ -75,5 +76,19 @@ Ticket::~Ticket()
 	}
 }
 
+ostream& operator<<(ostream& out, Ticket a) {
+
+	out << "UniqueID: ";
+	out << endl;
+	if (a.uniqueID != nullptr) {
+		
+		out << a.uniqueID;
+	}
+	out << "Zone: " << a.zone << endl;
+	out << "Row: " << a.row << endl;
+	out << "Seat: " << a.seat << endl;
+
+	return out;
+}
 
 
