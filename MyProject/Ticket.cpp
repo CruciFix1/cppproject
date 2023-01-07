@@ -1,6 +1,7 @@
 #include<iostream>
 #include "Ticket.h"
 #include<string>
+using namespace std;
 
 int Ticket::nrofgentickets = 0;
 
@@ -76,6 +77,20 @@ Ticket::~Ticket()
 	}
 }
 
+Ticket& Ticket::operator++()
+{
+	this->nrofgentickets++;
+	return *this;
+}
+
+Ticket Ticket::operator++(int) {
+
+	Ticket copy = *this;
+	copy.nrofgentickets++;
+	return copy;
+
+}
+
 ostream& operator<<(ostream& out, Ticket a) {
 
 	out << "UniqueID: ";
@@ -90,5 +105,24 @@ ostream& operator<<(ostream& out, Ticket a) {
 
 	return out;
 }
+
+istream& operator>>(istream& in, Ticket a) {
+
+	cout << endl << "Row: ";
+	
+	int buffer;
+
+	in >> buffer;
+	a.setRow(buffer);
+
+	cout << endl << "Seat: ";
+	in >> buffer;
+	a.setSeat(buffer);
+
+	return in;
+
+}
+
+
 
 
